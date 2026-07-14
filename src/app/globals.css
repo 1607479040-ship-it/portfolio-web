@@ -1,0 +1,267 @@
+@import "tailwindcss";
+
+/* ============================================
+   Design System — Custom Properties
+   ============================================ */
+
+@theme inline {
+  --color-dark: #1c1d20;
+  --color-dark-2: #141517;
+  --color-white: #fefefe;
+  --color-light: #f5f5f3;
+  --color-light-2: #ececea;
+  --color-gray-hero: #999d9e;
+  --color-gray-hero-2: #a1a1a2;
+  --color-muted: rgba(0, 0, 0, 0.55);
+  --color-muted-light: rgba(255, 255, 255, 0.5);
+  --font-sans: "Inter", "PingFang SC", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+  --font-mono: "SF Mono", "Cascadia Code", ui-monospace, Consolas, monospace;
+}
+
+:root {
+  --background: #fefefe;
+  --foreground: #1c1d20;
+  --color-accent: #FDE910;
+  --color-line: rgba(0, 0, 0, 0.08);
+  --color-line-dark: rgba(255, 255, 255, 0.08);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+/* ============================================
+   Base
+   ============================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto;
+  background: #fefefe;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans, system-ui, sans-serif);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  color: #1c1d20;
+  background: var(--color-accent);
+}
+
+/* ============================================
+   Lenis Smooth Scroll
+   ============================================ */
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: clip;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* ============================================
+   Typography Helpers
+   ============================================ */
+
+.type-display-hero {
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 0.9;
+  letter-spacing: 0;
+}
+
+.type-display-ghost {
+  font-family: var(--font-sans);
+  font-size: 132px;
+  font-weight: 700;
+  line-height: 0.82;
+  letter-spacing: 0;
+}
+
+.type-page-title {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 0.94;
+  letter-spacing: 0;
+}
+
+.type-section-title {
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 0.96;
+  letter-spacing: 0;
+}
+
+.type-intro {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.22;
+  letter-spacing: 0;
+}
+
+.type-work-title {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: 0;
+}
+
+.type-card-title {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.22;
+  letter-spacing: 0;
+}
+
+.type-email {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+
+.type-body {
+  font-size: 16px;
+  line-height: 1.65;
+  letter-spacing: 0;
+}
+
+.type-body-small {
+  font-size: 14px;
+  line-height: 1.65;
+  letter-spacing: 0;
+}
+
+.type-meta {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: 0;
+}
+
+@media (min-width: 768px) {
+  .type-display-hero {
+    font-size: 112px;
+  }
+
+  .type-display-ghost {
+    font-size: 260px;
+  }
+
+  .type-page-title {
+    font-size: 88px;
+  }
+
+  .type-section-title {
+    font-size: 76px;
+  }
+
+  .type-intro {
+    font-size: 38px;
+  }
+
+  .type-work-title {
+    font-size: 46px;
+  }
+
+  .type-card-title {
+    font-size: 22px;
+  }
+
+  .type-email {
+    font-size: 52px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .type-display-hero {
+    font-size: 164px;
+  }
+
+  .type-display-ghost {
+    font-size: 360px;
+  }
+
+  .type-page-title {
+    font-size: 118px;
+  }
+
+  .type-section-title {
+    font-size: 104px;
+  }
+
+  .type-intro {
+    font-size: 44px;
+  }
+
+  .type-work-title {
+    font-size: 58px;
+  }
+
+  .type-email {
+    font-size: 64px;
+  }
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.mask-reveal {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.mask-reveal > span {
+  display: inline-block;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+/* ============================================
+   Reduced Motion
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
