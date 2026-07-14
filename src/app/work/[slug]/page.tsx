@@ -1,12 +1,18 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { getProjectBySlug, getAdjacentProjects } from "@/lib/data";
+import { projects, getProjectBySlug, getAdjacentProjects } from "@/lib/data";
 import CaseMetadata from "@/components/work/case-metadata";
 import CaseGallery from "@/components/work/case-gallery";
 import CaseNavigation from "@/components/work/case-navigation";
 
 interface Props {
   params: Promise<{ slug: string }>;
+}
+
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return projects.map((project) => ({ slug: project.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
