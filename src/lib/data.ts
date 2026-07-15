@@ -1,4 +1,5 @@
 import type { Project } from "@/types";
+import { withBasePath } from "@/lib/paths";
 
 export const projects: Project[] = [
   {
@@ -8,12 +9,12 @@ export const projects: Project[] = [
     year: "2024",
     services: ["品牌策略", "视觉识别", "应用系统"],
     location: "Shanghai, China",
-    coverImage: "/images/projects/aurora-cover.jpg",
+    coverImage: withBasePath("/images/projects/aurora-cover.jpg"),
     images: [
-      "/images/projects/aurora-01.jpg",
-      "/images/projects/aurora-02.jpg",
-      "/images/projects/aurora-03.jpg",
-      "/images/projects/aurora-04.jpg",
+      withBasePath("/images/projects/aurora-01.jpg"),
+      withBasePath("/images/projects/aurora-02.jpg"),
+      withBasePath("/images/projects/aurora-03.jpg"),
+      withBasePath("/images/projects/aurora-04.jpg"),
     ],
     description:
       "为 Aurora Tech 建立完整的品牌识别系统，从标志、色彩、字体到空间应用和数字触点。",
@@ -33,11 +34,11 @@ export const projects: Project[] = [
     year: "2024",
     services: ["包装设计", "系列延展", "印刷物料"],
     location: "Shenzhen, China",
-    coverImage: "/images/projects/osmo-cover.jpg",
+    coverImage: withBasePath("/images/projects/osmo-cover.jpg"),
     images: [
-      "/images/projects/osmo-01.jpg",
-      "/images/projects/osmo-02.jpg",
-      "/images/projects/osmo-03.jpg",
+      withBasePath("/images/projects/osmo-01.jpg"),
+      withBasePath("/images/projects/osmo-02.jpg"),
+      withBasePath("/images/projects/osmo-03.jpg"),
     ],
     description:
       "为新消费品牌 Osmo Supply 打造系列化包装系统，涵盖产品包装、物流箱和礼盒套装。",
@@ -56,11 +57,11 @@ export const projects: Project[] = [
     year: "2023",
     services: ["活动主视觉", "社媒传播", "空间装置"],
     location: "Beijing, China",
-    coverImage: "/images/projects/northline-cover.jpg",
+    coverImage: withBasePath("/images/projects/northline-cover.jpg"),
     images: [
-      "/images/projects/northline-01.jpg",
-      "/images/projects/northline-02.jpg",
-      "/images/projects/northline-03.jpg",
+      withBasePath("/images/projects/northline-01.jpg"),
+      withBasePath("/images/projects/northline-02.jpg"),
+      withBasePath("/images/projects/northline-03.jpg"),
     ],
     description:
       "为 Northline Culture 2023 年度艺术节打造活动主视觉与全触点物料系统。",
@@ -79,11 +80,11 @@ export const projects: Project[] = [
     year: "2023",
     services: ["空间导视", "环境图形", "品牌触点"],
     location: "Chengdu, China",
-    coverImage: "/images/projects/flow-cover.jpg",
+    coverImage: withBasePath("/images/projects/flow-cover.jpg"),
     images: [
-      "/images/projects/flow-01.jpg",
-      "/images/projects/flow-02.jpg",
-      "/images/projects/flow-03.jpg",
+      withBasePath("/images/projects/flow-01.jpg"),
+      withBasePath("/images/projects/flow-02.jpg"),
+      withBasePath("/images/projects/flow-03.jpg"),
     ],
     description:
       "为 Flow Archive 设计空间导视系统，将品牌识别延伸至物理空间。",
@@ -102,11 +103,11 @@ export const projects: Project[] = [
     year: "2022",
     services: ["品牌策略", "视觉系统", "数字设计"],
     location: "Hangzhou, China",
-    coverImage: "/images/projects/studio-index-cover.jpg",
+    coverImage: withBasePath("/images/projects/studio-index-cover.jpg"),
     images: [
-      "/images/projects/studio-index-01.jpg",
-      "/images/projects/studio-index-02.jpg",
-      "/images/projects/studio-index-03.jpg",
+      withBasePath("/images/projects/studio-index-01.jpg"),
+      withBasePath("/images/projects/studio-index-02.jpg"),
+      withBasePath("/images/projects/studio-index-03.jpg"),
     ],
     description:
       "为设计工作室 Studio Index 打造全新的品牌视觉系统和数字形象。",
@@ -125,11 +126,11 @@ export const projects: Project[] = [
     year: "2022",
     services: ["字体设计", "版式规范", "品牌应用"],
     location: "Guangzhou, China",
-    coverImage: "/images/projects/penta-cover.jpg",
+    coverImage: withBasePath("/images/projects/penta-cover.jpg"),
     images: [
-      "/images/projects/penta-01.jpg",
-      "/images/projects/penta-02.jpg",
-      "/images/projects/penta-03.jpg",
+      withBasePath("/images/projects/penta-01.jpg"),
+      withBasePath("/images/projects/penta-02.jpg"),
+      withBasePath("/images/projects/penta-03.jpg"),
     ],
     description:
       "与 Penta Foundry 合作开发定制品牌字体，并建立完整的版式使用规范。",
@@ -148,11 +149,11 @@ export const projects: Project[] = [
     year: "2021",
     services: ["空间设计", "导视系统", "品牌体验"],
     location: "Sanya, China",
-    coverImage: "/images/projects/meridian-cover.jpg",
+    coverImage: withBasePath("/images/projects/meridian-cover.jpg"),
     images: [
-      "/images/projects/meridian-01.jpg",
-      "/images/projects/meridian-02.jpg",
-      "/images/projects/meridian-03.jpg",
+      withBasePath("/images/projects/meridian-01.jpg"),
+      withBasePath("/images/projects/meridian-02.jpg"),
+      withBasePath("/images/projects/meridian-03.jpg"),
     ],
     description:
       "为精品酒店品牌打造完整的空间品牌体验，从大堂到客房的每一个触点。",

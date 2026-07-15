@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useInView, useReducedMotion } from "framer-motion";
 import { SITE_CONFIG } from "@/lib/site-config";
+import { withBasePath } from "@/lib/paths";
 
 const HERO_MESSAGES = [
   {
@@ -56,7 +57,7 @@ export default function Hero() {
     >
       <video
         className="absolute inset-0 h-full w-full object-cover"
-        src="/videos/5-14.mp4"
+        src={withBasePath("/videos/5-14.mp4")}
         autoPlay
         muted
         loop
@@ -78,8 +79,8 @@ export default function Hero() {
               aria-label={SITE_CONFIG.name}
               className="block h-[18px] w-[69px] bg-[#1C1D20]"
               style={{
-                WebkitMaskImage: "url('/images/weibowen.png')",
-                maskImage: "url('/images/weibowen.png')",
+                WebkitMaskImage: `url('${withBasePath("/images/weibowen.png")}')`,
+                maskImage: `url('${withBasePath("/images/weibowen.png")}')`,
                 WebkitMaskRepeat: "no-repeat",
                 maskRepeat: "no-repeat",
                 WebkitMaskPosition: "left center",

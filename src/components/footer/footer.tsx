@@ -4,6 +4,7 @@ import { useRef, useState, type ReactNode } from "react";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { ArrowDownLeft } from "lucide-react";
 import { SITE_CONFIG, SOCIAL_LINKS } from "@/lib/site-config";
+import { withBasePath } from "@/lib/paths";
 
 type LayerState = "rest" | "enter" | "leave";
 
@@ -69,7 +70,7 @@ export default function Footer() {
             <div className="relative mt-[clamp(42px,6vw,70px)]">
               <div className="h-px w-full bg-white/14" />
               <motion.a
-                href="/resume.pdf"
+                href={withBasePath("/resume.pdf")}
                 download
                 className="absolute right-[clamp(6px,8vw,96px)] top-1/2 flex h-[102px] w-[102px] items-center justify-center rounded-full bg-[#FDE910] text-[18px] font-medium tracking-[0.08em] text-[#1C1D20] shadow-[0_22px_58px_rgba(0,0,0,0.18)] md:h-[122px] md:w-[122px]"
                 style={{ x: resumeX, y: "-50%", opacity: resumeOpacity }}

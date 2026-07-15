@@ -4,12 +4,13 @@ import Link from "next/link";
 import { useEffect, useState, type CSSProperties, type MouseEvent } from "react";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { withBasePath } from "@/lib/paths";
 import { useRouteTransition } from "@/providers/route-transition-provider";
 import SideNav from "./side-nav";
 
 const NAME_MARK_MASK: CSSProperties = {
-  WebkitMaskImage: "url('/images/weibowen.png')",
-  maskImage: "url('/images/weibowen.png')",
+  WebkitMaskImage: `url('${withBasePath("/images/weibowen.png")}')`,
+  maskImage: `url('${withBasePath("/images/weibowen.png")}')`,
   WebkitMaskRepeat: "no-repeat",
   maskRepeat: "no-repeat",
   WebkitMaskPosition: "left center",
